@@ -27,7 +27,7 @@ fun main() {
 
     println(people.filter { it.age > 30 }.map(Person::nickname))
 
-    println(people.filter { it.age == people.maxBy(Person::age)!!.age })
+    println(people.filter { it.age == people.maxByOrNull(Person::age)!!.age })
 
     val canBeInClub27 = { p: Person -> p.age <= 27 }
 
